@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ToDoList(models.Model):
-    name = models.CharField(max_lengh=200)
+    name = models.CharField(max_length=200)
     
     def __str__(self):
         return self.name
