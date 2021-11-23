@@ -4,5 +4,5 @@ from .models import ToDoList, Item
 
 # Create your views here.
 def index(response, id):
-    ls = ToDoList.objects.get(id=id)
-    return HttpResponse("<h1>%s</h1>" %ls.name)
+    #ls = ToDoList.objects.get(id=id)
+    return HttpResponse("<h1>%s</h1>" % id)
