@@ -9,6 +9,8 @@ def index(response, id):
     # my_dict = {}
     ls = ToDoList.objects.get(id=id)
     return render(response, "main/base.html", {
+        "name":ls.name,
+        "ls": ls
     })
     # original
     #ls = ToDoList.objects.get(name=name)
