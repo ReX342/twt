@@ -4,6 +4,9 @@ from .models import ToDoList, Item
 
 # Create your views here.
 def index(response, id):
+    # instead of ls.name in name, 
+    # # we can setup all vars ahead
+    # my_dict = {}
     ls = ToDoList.objects.get(id=id)
     return render(response, "main/base.html", {
         "name":ls.name
@@ -16,6 +19,6 @@ def index(response, id):
 
 def home(response):
     return render(response, "main/home.html", {
-        # "worked" without "" around test
+        # Show "test" when going to homepage (localhost:8000)
         "name": "test"
     })
