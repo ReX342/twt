@@ -19,6 +19,4 @@ def index(response, id):
 
 def home(response):
     return render(response, "main/home.html", {
-        # Show "test" when going to homepage (localhost:8000)
-        "name": "test"
     })
