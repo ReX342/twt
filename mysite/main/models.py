@@ -6,3 +6,6 @@ class ToDoList(models.Model):
     
     def __str__(self):
         return self.name
+    
+class Item(models.Model):
+    todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
