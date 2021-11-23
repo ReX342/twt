@@ -5,8 +5,7 @@ class ToDoList(models.Model):
     name = models.CharField(max_length=200)
     
     def __str__(self):
-        # Should be returning Tim's List instead of memory address on ToDoList.objects.get(id=1)
-        # Instead results in being obvious about being broken/bugged some other way
+        # Returning eg. "Tim's List" instead of memory address on ToDoList.objects.get(id=1)
         return self.name
     
 class Item(models.Model):
