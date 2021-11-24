@@ -26,7 +26,7 @@ def home(response):
 def create(response):
     if response.method == "POST":
         form = CreateNewList(response.POST)
-
+        
         if form.is_valid():
             n = form.cleaned_data["name"]
             t = ToDoList(name=n)
@@ -36,5 +36,5 @@ def create(response):
 
     else:
         form = CreateNewList()
-
+        
     return render(response, "main/create.html", {"form":form})
