@@ -10,6 +10,12 @@ def index(response, id):
     # my_dict = {}
     ls = ToDoList.objects.get(id=id)
     #item = ls.item_set.get(id=1)
+    
+    
+    if response.method == "POST":    
+        if response.POST.get("save"):
+            
+    
     return render(response, "main/list.html", {
         "name":ls.name,
         "ls": ls
