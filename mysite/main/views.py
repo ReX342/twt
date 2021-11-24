@@ -21,3 +21,5 @@ def index(response, id):
 def home(response):
     return render(response, "main/home.html", {
     })
+def create(response):
+    return render(response, 'main/create.html', {"form":form})
