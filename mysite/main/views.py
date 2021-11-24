@@ -8,11 +8,11 @@ def index(response, id):
     # # we can setup all vars ahead
     # my_dict = {}
     ls = ToDoList.objects.get(id=id)
-    return render(response, "main/base.html", {
+    #item = ls.item_set.get(id=1)
+    return render(response, "main/list.html", {
         "name":ls.name,
         "ls": ls
     })
-    #item = ls.item_set.get(id=1)
     # original
     #ls = ToDoList.objects.get(name=name)
     #return HttpResponse("<h1>%s</h1><br></br><p>%s</p>" %(ls.name, str(item.text)))
