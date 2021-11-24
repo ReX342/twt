@@ -10,18 +10,18 @@
             <div class="input-group-prend">
                 <div class="input-group-text">
                 {% if item.complete == True %}
-                    <input type="checkbox", value="clicked", name="c{{item.id}}" checked>{{item.text}}
+                    <input type="checkbox", value="clicked", name="c{{item.id}}" checked>
                 {% else %}
-                    <input type="checkbox", value="clicked", name="c{{item.id}}">{{item.text}}
+                    <input type="checkbox", value="clicked", name="c{{item.id}}">
                 {% endif %}
                 </div>
             </div>
             <input type="text", value="{{item.text}}", class="form-control">
         </div>
         {% endfor %}
-    <button type="submit" name="save", value="save">Save</button>
-    <input type="text", name="new">
-    <button type="submit" name="newItem", value="newItem">New Item</button>
-    </form>
 
+        <button type="submit" name="save", value="save">Save</button>
+        <input type="text", name="new">
+        <button type="submit" name="newItem", value="newItem">New Item</button>
+    </form>
 {% endblock %}
