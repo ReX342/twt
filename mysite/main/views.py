@@ -23,7 +23,7 @@ def index(response, id):
                 item.save()        
             
         elif response.POST.get("newItem"):
-            txt = response.POST.gett("new")
+            txt = response.POST.get("new")
             
             if len(txt) > 2:
                 ls.item_set.create(text=txt, complete=False)
