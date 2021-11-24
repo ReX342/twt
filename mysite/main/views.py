@@ -33,5 +33,5 @@ def create(response):
             t.save()
 
     else:
-    form = CreateNewList()
+        form = CreateNewList()
     return render(response, "main/create.html", {"form":form})
