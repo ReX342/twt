@@ -21,9 +21,11 @@
         {% endfor %}
 
         <div class="input-group mb-3">
+            <div class="input-group-prend">
+                <button type="submit" name="newItem", value="newItem", class="btn btn-success">New Item</button>
+            </div>
             <input type="text", name="new">
-            <button type="submit" name="newItem", value="newItem">New Item</button>
-
-        <button type="submit" name="save", value="save">Save</button>
+        </div>
+        <button type="submit" name="save", value="save", class="btn btn-success">Save</button>
     </form>
 {% endblock %}
