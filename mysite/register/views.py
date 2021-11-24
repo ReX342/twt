@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 
@@ -8,6 +8,8 @@ def register(response):
         form = UserCreationForm(response.POST)
         if form.is_valid():
             form.save()
+            
+        return redirect("/home")
     else:
         form = UserCreationForm()
             
