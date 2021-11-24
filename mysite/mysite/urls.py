@@ -22,4 +22,5 @@ urlpatterns = [
     # default path, everything after will be sent to main/ url.py
     path("register/", v.register, name="register"),
     path('', include("main.urls")),
+    path('', include("django.contrib.auth.urls")),
 ]
