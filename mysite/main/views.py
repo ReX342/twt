@@ -11,11 +11,20 @@ def index(response, id):
     ls = ToDoList.objects.get(id=id)
     #item = ls.item_set.get(id=1)
     
-    
-    if response.method == "POST":    
+    #{"save":["save"], "c1":["clicked"]}
+    if response.method == "POST":
+        print(response.POST)    
         if response.POST.get("save"):
+            for item in ls.item_set.all():
+                if response.POST.get("c" + str(item.id)) == "clicked":
+                    item.complete = True
+                else:
+                    item.complete = 
+                item.save()        
             
-    
+        elif reponse.POST.get("newItem")
+            pass
+        
     return render(response, "main/list.html", {
         "name":ls.name,
         "ls": ls
